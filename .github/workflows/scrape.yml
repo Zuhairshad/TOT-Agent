@@ -1,9 +1,10 @@
 name: Scrape
 
 on:
-  schedule:
-    # Minute 7 of every hour (UTC): avoids the busy top of the hour.
-    - cron: '7 * * * *'
+  # PAUSED: the hourly schedule is off until the TendersOnTime scraper is configured
+  # (SITE_CONFIGURED in packages/scraper/src/site.ts); every scheduled run would fail.
+  # To re-enable, add back a `schedule` trigger with one cron entry: "7 * * * *"
+  # (minute 7 of every hour, UTC, avoids the busy top of the hour).
   workflow_dispatch:
     inputs:
       dry_run:

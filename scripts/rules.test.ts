@@ -94,9 +94,11 @@ describe('CLAUDE.md rule 5: no secrets or session files in the repo', () => {
 
 describe('CLAUDE.md rule 1: at most one scrape run per hour', () => {
   const wf = read('.github/workflows/scrape.yml');
-  it('the only schedule is a single hourly cron', () => {
+  it('has at most one schedule, and if present it is a single hourly cron', () => {
     const crons = [...wf.matchAll(/-\s*cron:\s*'([^']+)'/g)].map((m) => m[1]);
-    expect(crons).toHaveLength(1);
+    // No schedule is allowed: the scraper is paused (manual runs only) until SITE_CONFIGURED.
+    expect(crons.length).toBeLessThanOrEqual(1);
+    if (crons.length === 0) return;
     const fields = (crons[0] ?? '').split(/\s+/);
     expect(fields).toHaveLength(5);
     expect(fields[0]).toMatch(/^\d+$/); // one fixed minute, not */N or lists
