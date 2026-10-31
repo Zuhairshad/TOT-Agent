@@ -1,0 +1,559 @@
+{
+  "scans": [
+    {
+      "id": "scan-lock-test-1",
+      "source": "worldbank",
+      "status": "failed",
+      "accessStatus": "ok",
+      "startedAt": "2026-10-31T14:08:24.541Z",
+      "finishedAt": "2026-10-31T14:10:30.000Z",
+      "lastHeartbeatAt": "2026-10-31T14:08:33.415Z",
+      "params": { "since": "2026-10-29T14:07:03.958Z" },
+      "keywordsSearched": [],
+      "pagesChecked": 0,
+      "recordsFound": 0,
+      "recordsNew": 0,
+      "recordsUpdated": 0,
+      "documentsFetched": 0,
+      "failures": [],
+      "coverageLimitations": ["Aborted lock test; no scanning was done."],
+      "checkpoint": null,
+      "triggeredBy": null
+    },
+    {
+      "id": "scan-20261031-b06aef7d",
+      "source": "tendersontime",
+      "status": "blocked",
+      "accessStatus": "blocked_by_challenge",
+      "startedAt": "2026-10-31T14:07:45.592Z",
+      "finishedAt": "2026-10-31T14:07:46.000Z",
+      "lastHeartbeatAt": "2026-10-31T14:07:46.089Z",
+      "params": {
+        "triggeredBy": "e2e-tot",
+        "since": null,
+        "countries": null,
+        "maxPages": 5,
+        "maxRequests": 400,
+        "resume": false
+      },
+      "keywordsSearched": [],
+      "pagesChecked": 0,
+      "recordsFound": 0,
+      "recordsNew": 0,
+      "recordsUpdated": 0,
+      "documentsFetched": 0,
+      "failures": [
+        {
+          "url": null,
+          "stage": "other",
+          "error": "Bot challenge / block detected; not retried and not worked around.",
+          "retryable": false
+        }
+      ],
+      "coverageLimitations": [
+        "TendersOnTime answers plain automated requests with a Cloudflare challenge; this source is not scanned and no tenders from it are included.",
+        "Access check: blocked_by_challenge. 403: cf-mitigated: challenge",
+        "The source blocked automated access with a bot challenge. Nothing was scanned; a human must provide authorised access (see docs/runbook.md)."
+      ],
+      "checkpoint": { "adapter": {}, "processedCount": 0, "stopReasons": {} },
+      "triggeredBy": "e2e-tot"
+    },
+    {
+      "id": "scan-20261031-8e9a6fe8",
+      "source": "worldbank",
+      "status": "succeeded",
+      "accessStatus": "ok",
+      "startedAt": "2026-10-31T14:07:03.958Z",
+      "finishedAt": "2026-10-31T14:07:45.000Z",
+      "lastHeartbeatAt": "2026-10-31T14:07:45.258Z",
+      "params": {
+        "triggeredBy": "e2e-rescan",
+        "since": "2026-10-29T14:06:09.712Z",
+        "countries": ["Zambia"],
+        "maxPages": 2,
+        "maxRequests": 400,
+        "resume": false
+      },
+      "keywordsSearched": [
+        "motorbike (Zambia)",
+        "motorcycle (Zambia)",
+        "motor cycle (Zambia)",
+        "scooter (Zambia)",
+        "electric motorcycle (Zambia)",
+        "motorcycle helmet (Zambia)",
+        "crash helmet (Zambia)",
+        "riding jacket (Zambia)",
+        "riding gloves (Zambia)",
+        "riding boots (Zambia)",
+        "protective riding equipment (Zambia)",
+        "riding gear (Zambia)",
+        "personal protective equipment (Zambia)",
+        "PPE (Zambia)",
+        "safety helmet (Zambia)",
+        "protective gloves (Zambia)",
+        "safety footwear (Zambia)",
+        "safety boots (Zambia)",
+        "reflective vest (Zambia)",
+        "coverall (Zambia)",
+        "coveralls (Zambia)",
+        "eye protection (Zambia)",
+        "respiratory protection (Zambia)"
+      ],
+      "pagesChecked": 23,
+      "recordsFound": 0,
+      "recordsNew": 0,
+      "recordsUpdated": 0,
+      "documentsFetched": 0,
+      "failures": [],
+      "coverageLimitations": [
+        "World Bank-financed procurement notices only; this is not all Zambian public tenders (national, other-donor and non-published tenders are not included).",
+        "Keyword matching is done by the World Bank search API (full-text); notices that do not use these words are not found, and its exact matching rules are not documented.",
+        "Country filter is an exact match on the project country name; regional projects that cover several countries are not matched.",
+        "The API has no structured deadline field; deadlines are read from the notice text and may be missing, so status 'open' is only claimed when a future deadline was found.",
+        "Paging stopped per keyword: PPE (Zambia): older_than_since; coverall (Zambia): empty_page; coveralls (Zambia): older_than_since; crash helmet (Zambia): empty_page; electric motorcycle (Zambia): empty_page; eye protection (Zambia): empty_page; motor cycle (Zambia): empty_page; motorbike (Zambia): empty_page; motorcycle (Zambia): older_than_since; motorcycle helmet (Zambia): empty_page; personal protective equipment (Zambia): older_than_since; protective gloves (Zambia): older_than_since; protective riding equipment (Zambia): empty_page; reflective vest (Zambia): empty_page; respiratory protection (Zambia): older_than_since; riding boots (Zambia): empty_page; riding gear (Zambia): empty_page; riding gloves (Zambia): empty_page; riding jacket (Zambia): empty_page; safety boots (Zambia): older_than_since; safety footwear (Zambia): older_than_since; safety helmet (Zambia): empty_page; scooter (Zambia): empty_page."
+      ],
+      "checkpoint": {
+        "adapter": {
+          "units": {
+            "Zambia|motorbike": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|motorcycle": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+            "Zambia|motor cycle": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|scooter": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|electric motorcycle": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "empty_page"
+            },
+            "Zambia|motorcycle helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|crash helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding jacket": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding gloves": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding boots": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|protective riding equipment": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "empty_page"
+            },
+            "Zambia|riding gear": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|personal protective equipment": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "older_than_since"
+            },
+            "Zambia|PPE": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+            "Zambia|safety helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|protective gloves": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "older_than_since"
+            },
+            "Zambia|safety footwear": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "older_than_since"
+            },
+            "Zambia|safety boots": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+            "Zambia|reflective vest": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|coverall": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|coveralls": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+            "Zambia|eye protection": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|respiratory protection": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "older_than_since"
+            }
+          }
+        },
+        "processedCount": 0,
+        "stopReasons": {
+          "motorbike (Zambia)": "empty_page",
+          "motorcycle (Zambia)": "older_than_since",
+          "motor cycle (Zambia)": "empty_page",
+          "scooter (Zambia)": "empty_page",
+          "electric motorcycle (Zambia)": "empty_page",
+          "motorcycle helmet (Zambia)": "empty_page",
+          "crash helmet (Zambia)": "empty_page",
+          "riding jacket (Zambia)": "empty_page",
+          "riding gloves (Zambia)": "empty_page",
+          "riding boots (Zambia)": "empty_page",
+          "protective riding equipment (Zambia)": "empty_page",
+          "riding gear (Zambia)": "empty_page",
+          "personal protective equipment (Zambia)": "older_than_since",
+          "PPE (Zambia)": "older_than_since",
+          "safety helmet (Zambia)": "empty_page",
+          "protective gloves (Zambia)": "older_than_since",
+          "safety footwear (Zambia)": "older_than_since",
+          "safety boots (Zambia)": "older_than_since",
+          "reflective vest (Zambia)": "empty_page",
+          "coverall (Zambia)": "empty_page",
+          "coveralls (Zambia)": "older_than_since",
+          "eye protection (Zambia)": "empty_page",
+          "respiratory protection (Zambia)": "older_than_since"
+        }
+      },
+      "triggeredBy": "e2e-rescan"
+    },
+    {
+      "id": "scan-20261031-1635036f",
+      "source": "worldbank",
+      "status": "succeeded",
+      "accessStatus": "ok",
+      "startedAt": "2026-10-31T14:06:09.712Z",
+      "finishedAt": "2026-10-31T14:06:52.000Z",
+      "lastHeartbeatAt": "2026-10-31T14:06:52.652Z",
+      "params": {
+        "triggeredBy": "e2e-test",
+        "since": null,
+        "countries": ["Zambia"],
+        "maxPages": 2,
+        "maxRequests": 400,
+        "resume": false
+      },
+      "keywordsSearched": [
+        "motorbike (Zambia)",
+        "motorcycle (Zambia)",
+        "motor cycle (Zambia)",
+        "scooter (Zambia)",
+        "electric motorcycle (Zambia)",
+        "motorcycle helmet (Zambia)",
+        "crash helmet (Zambia)",
+        "riding jacket (Zambia)",
+        "riding gloves (Zambia)",
+        "riding boots (Zambia)",
+        "protective riding equipment (Zambia)",
+        "riding gear (Zambia)",
+        "personal protective equipment (Zambia)",
+        "PPE (Zambia)",
+        "safety helmet (Zambia)",
+        "protective gloves (Zambia)",
+        "safety footwear (Zambia)",
+        "safety boots (Zambia)",
+        "reflective vest (Zambia)",
+        "coverall (Zambia)",
+        "coveralls (Zambia)",
+        "eye protection (Zambia)",
+        "respiratory protection (Zambia)"
+      ],
+      "pagesChecked": 23,
+      "recordsFound": 15,
+      "recordsNew": 15,
+      "recordsUpdated": 0,
+      "documentsFetched": 0,
+      "failures": [],
+      "coverageLimitations": [
+        "World Bank-financed procurement notices only; this is not all Zambian public tenders (national, other-donor and non-published tenders are not included).",
+        "Keyword matching is done by the World Bank search API (full-text); notices that do not use these words are not found, and its exact matching rules are not documented.",
+        "Country filter is an exact match on the project country name; regional projects that cover several countries are not matched.",
+        "The API has no structured deadline field; deadlines are read from the notice text and may be missing, so status 'open' is only claimed when a future deadline was found.",
+        "23 notice(s) returned by the source search had no keyword match in their title, description or items and were not stored.",
+        "Paging stopped per keyword: PPE (Zambia): no_next_link; coverall (Zambia): empty_page; coveralls (Zambia): no_next_link; crash helmet (Zambia): empty_page; electric motorcycle (Zambia): empty_page; eye protection (Zambia): empty_page; motor cycle (Zambia): empty_page; motorbike (Zambia): empty_page; motorcycle (Zambia): no_next_link; motorcycle helmet (Zambia): empty_page; personal protective equipment (Zambia): no_next_link; protective gloves (Zambia): no_next_link; protective riding equipment (Zambia): empty_page; reflective vest (Zambia): empty_page; respiratory protection (Zambia): no_next_link; riding boots (Zambia): empty_page; riding gear (Zambia): empty_page; riding gloves (Zambia): empty_page; riding jacket (Zambia): empty_page; safety boots (Zambia): no_next_link; safety footwear (Zambia): no_next_link; safety helmet (Zambia): empty_page; scooter (Zambia): empty_page."
+      ],
+      "checkpoint": {
+        "adapter": {
+          "units": {
+            "Zambia|motorbike": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|motorcycle": { "pagesDone": 1, "finished": true, "stop": "no_next_link" },
+            "Zambia|motor cycle": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|scooter": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|electric motorcycle": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "empty_page"
+            },
+            "Zambia|motorcycle helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|crash helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding jacket": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding gloves": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|riding boots": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|protective riding equipment": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "empty_page"
+            },
+            "Zambia|riding gear": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|personal protective equipment": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "no_next_link"
+            },
+            "Zambia|PPE": { "pagesDone": 1, "finished": true, "stop": "no_next_link" },
+            "Zambia|safety helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|protective gloves": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "no_next_link"
+            },
+            "Zambia|safety footwear": { "pagesDone": 1, "finished": true, "stop": "no_next_link" },
+            "Zambia|safety boots": { "pagesDone": 1, "finished": true, "stop": "no_next_link" },
+            "Zambia|reflective vest": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|coverall": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|coveralls": { "pagesDone": 1, "finished": true, "stop": "no_next_link" },
+            "Zambia|eye protection": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+            "Zambia|respiratory protection": {
+              "pagesDone": 1,
+              "finished": true,
+              "stop": "no_next_link"
+            }
+          }
+        },
+        "processedCount": 38,
+        "stopReasons": {
+          "motorbike (Zambia)": "empty_page",
+          "motorcycle (Zambia)": "no_next_link",
+          "motor cycle (Zambia)": "empty_page",
+          "scooter (Zambia)": "empty_page",
+          "electric motorcycle (Zambia)": "empty_page",
+          "motorcycle helmet (Zambia)": "empty_page",
+          "crash helmet (Zambia)": "empty_page",
+          "riding jacket (Zambia)": "empty_page",
+          "riding gloves (Zambia)": "empty_page",
+          "riding boots (Zambia)": "empty_page",
+          "protective riding equipment (Zambia)": "empty_page",
+          "riding gear (Zambia)": "empty_page",
+          "personal protective equipment (Zambia)": "no_next_link",
+          "PPE (Zambia)": "no_next_link",
+          "safety helmet (Zambia)": "empty_page",
+          "protective gloves (Zambia)": "no_next_link",
+          "safety footwear (Zambia)": "no_next_link",
+          "safety boots (Zambia)": "no_next_link",
+          "reflective vest (Zambia)": "empty_page",
+          "coverall (Zambia)": "empty_page",
+          "coveralls (Zambia)": "no_next_link",
+          "eye protection (Zambia)": "empty_page",
+          "respiratory protection (Zambia)": "no_next_link"
+        }
+      },
+      "triggeredBy": "e2e-test"
+    }
+  ],
+  "sources": [
+    {
+      "source": "tendersontime",
+      "recordCount": 0,
+      "running": false,
+      "lastScan": {
+        "id": "scan-20261031-b06aef7d",
+        "source": "tendersontime",
+        "status": "blocked",
+        "accessStatus": "blocked_by_challenge",
+        "startedAt": "2026-10-31T14:07:45.592Z",
+        "finishedAt": "2026-10-31T14:07:46.000Z",
+        "lastHeartbeatAt": "2026-10-31T14:07:46.089Z",
+        "params": {
+          "triggeredBy": "e2e-tot",
+          "since": null,
+          "countries": null,
+          "maxPages": 5,
+          "maxRequests": 400,
+          "resume": false
+        },
+        "keywordsSearched": [],
+        "pagesChecked": 0,
+        "recordsFound": 0,
+        "recordsNew": 0,
+        "recordsUpdated": 0,
+        "documentsFetched": 0,
+        "failures": [
+          {
+            "url": null,
+            "stage": "other",
+            "error": "Bot challenge / block detected; not retried and not worked around.",
+            "retryable": false
+          }
+        ],
+        "coverageLimitations": [
+          "TendersOnTime answers plain automated requests with a Cloudflare challenge; this source is not scanned and no tenders from it are included.",
+          "Access check: blocked_by_challenge. 403: cf-mitigated: challenge",
+          "The source blocked automated access with a bot challenge. Nothing was scanned; a human must provide authorised access (see docs/runbook.md)."
+        ],
+        "checkpoint": { "adapter": {}, "processedCount": 0, "stopReasons": {} },
+        "triggeredBy": "e2e-tot"
+      },
+      "lastSuccessfulScan": null,
+      "accessStatus": "blocked_by_challenge",
+      "lastFailure": {
+        "scanId": "scan-20261031-b06aef7d",
+        "at": "2026-10-31T14:07:46.000Z",
+        "status": "blocked",
+        "accessStatus": "blocked_by_challenge",
+        "message": "Bot challenge / block detected; not retried and not worked around."
+      }
+    },
+    {
+      "source": "worldbank",
+      "recordCount": 15,
+      "running": false,
+      "lastScan": {
+        "id": "scan-lock-test-1",
+        "source": "worldbank",
+        "status": "failed",
+        "accessStatus": "ok",
+        "startedAt": "2026-10-31T14:08:24.541Z",
+        "finishedAt": "2026-10-31T14:10:30.000Z",
+        "lastHeartbeatAt": "2026-10-31T14:08:33.415Z",
+        "params": { "since": "2026-10-29T14:07:03.958Z" },
+        "keywordsSearched": [],
+        "pagesChecked": 0,
+        "recordsFound": 0,
+        "recordsNew": 0,
+        "recordsUpdated": 0,
+        "documentsFetched": 0,
+        "failures": [],
+        "coverageLimitations": ["Aborted lock test; no scanning was done."],
+        "checkpoint": null,
+        "triggeredBy": null
+      },
+      "lastSuccessfulScan": {
+        "id": "scan-20261031-8e9a6fe8",
+        "source": "worldbank",
+        "status": "succeeded",
+        "accessStatus": "ok",
+        "startedAt": "2026-10-31T14:07:03.958Z",
+        "finishedAt": "2026-10-31T14:07:45.000Z",
+        "lastHeartbeatAt": "2026-10-31T14:07:45.258Z",
+        "params": {
+          "triggeredBy": "e2e-rescan",
+          "since": "2026-10-29T14:06:09.712Z",
+          "countries": ["Zambia"],
+          "maxPages": 2,
+          "maxRequests": 400,
+          "resume": false
+        },
+        "keywordsSearched": [
+          "motorbike (Zambia)",
+          "motorcycle (Zambia)",
+          "motor cycle (Zambia)",
+          "scooter (Zambia)",
+          "electric motorcycle (Zambia)",
+          "motorcycle helmet (Zambia)",
+          "crash helmet (Zambia)",
+          "riding jacket (Zambia)",
+          "riding gloves (Zambia)",
+          "riding boots (Zambia)",
+          "protective riding equipment (Zambia)",
+          "riding gear (Zambia)",
+          "personal protective equipment (Zambia)",
+          "PPE (Zambia)",
+          "safety helmet (Zambia)",
+          "protective gloves (Zambia)",
+          "safety footwear (Zambia)",
+          "safety boots (Zambia)",
+          "reflective vest (Zambia)",
+          "coverall (Zambia)",
+          "coveralls (Zambia)",
+          "eye protection (Zambia)",
+          "respiratory protection (Zambia)"
+        ],
+        "pagesChecked": 23,
+        "recordsFound": 0,
+        "recordsNew": 0,
+        "recordsUpdated": 0,
+        "documentsFetched": 0,
+        "failures": [],
+        "coverageLimitations": [
+          "World Bank-financed procurement notices only; this is not all Zambian public tenders (national, other-donor and non-published tenders are not included).",
+          "Keyword matching is done by the World Bank search API (full-text); notices that do not use these words are not found, and its exact matching rules are not documented.",
+          "Country filter is an exact match on the project country name; regional projects that cover several countries are not matched.",
+          "The API has no structured deadline field; deadlines are read from the notice text and may be missing, so status 'open' is only claimed when a future deadline was found.",
+          "Paging stopped per keyword: PPE (Zambia): older_than_since; coverall (Zambia): empty_page; coveralls (Zambia): older_than_since; crash helmet (Zambia): empty_page; electric motorcycle (Zambia): empty_page; eye protection (Zambia): empty_page; motor cycle (Zambia): empty_page; motorbike (Zambia): empty_page; motorcycle (Zambia): older_than_since; motorcycle helmet (Zambia): empty_page; personal protective equipment (Zambia): older_than_since; protective gloves (Zambia): older_than_since; protective riding equipment (Zambia): empty_page; reflective vest (Zambia): empty_page; respiratory protection (Zambia): older_than_since; riding boots (Zambia): empty_page; riding gear (Zambia): empty_page; riding gloves (Zambia): empty_page; riding jacket (Zambia): empty_page; safety boots (Zambia): older_than_since; safety footwear (Zambia): older_than_since; safety helmet (Zambia): empty_page; scooter (Zambia): empty_page."
+        ],
+        "checkpoint": {
+          "adapter": {
+            "units": {
+              "Zambia|motorbike": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|motorcycle": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+              "Zambia|motor cycle": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|scooter": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|electric motorcycle": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "empty_page"
+              },
+              "Zambia|motorcycle helmet": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "empty_page"
+              },
+              "Zambia|crash helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|riding jacket": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|riding gloves": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|riding boots": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|protective riding equipment": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "empty_page"
+              },
+              "Zambia|riding gear": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|personal protective equipment": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "older_than_since"
+              },
+              "Zambia|PPE": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+              "Zambia|safety helmet": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|protective gloves": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "older_than_since"
+              },
+              "Zambia|safety footwear": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "older_than_since"
+              },
+              "Zambia|safety boots": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "older_than_since"
+              },
+              "Zambia|reflective vest": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|coverall": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|coveralls": { "pagesDone": 1, "finished": true, "stop": "older_than_since" },
+              "Zambia|eye protection": { "pagesDone": 1, "finished": true, "stop": "empty_page" },
+              "Zambia|respiratory protection": {
+                "pagesDone": 1,
+                "finished": true,
+                "stop": "older_than_since"
+              }
+            }
+          },
+          "processedCount": 0,
+          "stopReasons": {
+            "motorbike (Zambia)": "empty_page",
+            "motorcycle (Zambia)": "older_than_since",
+            "motor cycle (Zambia)": "empty_page",
+            "scooter (Zambia)": "empty_page",
+            "electric motorcycle (Zambia)": "empty_page",
+            "motorcycle helmet (Zambia)": "empty_page",
+            "crash helmet (Zambia)": "empty_page",
+            "riding jacket (Zambia)": "empty_page",
+            "riding gloves (Zambia)": "empty_page",
+            "riding boots (Zambia)": "empty_page",
+            "protective riding equipment (Zambia)": "empty_page",
+            "riding gear (Zambia)": "empty_page",
+            "personal protective equipment (Zambia)": "older_than_since",
+            "PPE (Zambia)": "older_than_since",
+            "safety helmet (Zambia)": "empty_page",
+            "protective gloves (Zambia)": "older_than_since",
+            "safety footwear (Zambia)": "older_than_since",
+            "safety boots (Zambia)": "older_than_since",
+            "reflective vest (Zambia)": "empty_page",
+            "coverall (Zambia)": "empty_page",
+            "coveralls (Zambia)": "older_than_since",
+            "eye protection (Zambia)": "empty_page",
+            "respiratory protection (Zambia)": "older_than_since"
+          }
+        },
+        "triggeredBy": "e2e-rescan"
+      },
+      "accessStatus": "ok",
+      "lastFailure": {
+        "scanId": "scan-lock-test-1",
+        "at": "2026-10-31T14:10:30.000Z",
+        "status": "failed",
+        "accessStatus": "ok",
+        "message": null
+      }
+    }
+  ]
+}

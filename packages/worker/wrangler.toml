@@ -1,0 +1,47 @@
+name = "tender-monitor-worker"
+main = "src/index.ts"
+compatibility_date = "2025-07-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tender-monitor"
+# PLACEHOLDER: replace with the id printed by `wrangler d1 create tender-monitor`.
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+# Static web UI (packages/web, built to ../web/dist). Installed wrangler 3.114.x only supports
+# `run_worker_first` as a BOOLEAN, so the Worker runs first for every request: API/Slack/health
+# paths are handled in src/index.ts and everything else is passed to env.ASSETS.fetch() (which does
+# the single-page-application fallback). Wrangler 4.x can list the API paths in `run_worker_first`
+# so static files skip the Worker; that needs an upgrade (see docs/worker-api.md).
+# `wrangler dev` / `wrangler deploy` fail until `packages/web/dist` exists (build the UI first).
+[assets]
+directory = "../web/dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = true
+
+[vars]
+# Workflow that POST /api/scans dispatches (.github/workflows/<name>). GITHUB_REPOSITORY
+# ("owner/repo") is set per deployment: see docs/worker-api.md. Optional: GITHUB_REF (default main).
+SCAN_WORKFLOW = "scan.yml"
+
+[triggers]
+# Two schedules, dispatched on controller.cron in src/scheduled.ts (keep the strings identical):
+#   "0 */3 * * *"  watchdog: every 3 hours, alert if the scraper has not reported in.
+#   "0 5 * * *"    daily job at 05:00 UTC = 07:00 Zambia (Africa/Lusaka, UTC+2, no DST):
+#                  daily summary + 7-day / 2-day deadline reminders.
+crons = ["0 */3 * * *", "0 5 * * *"]
+
+# No secrets in this file. Set them with `wrangler secret put <NAME>`
+# (locally: put them in packages/worker/.dev.vars, which is git-ignored):
+#   INGEST_SECRET         shared Bearer token the scraper sends to POST /ingest
+#   SLACK_BOT_TOKEN       xoxb-... Bot User OAuth Token
+#   SLACK_SIGNING_SECRET  Slack app "Signing Secret" (verifies /slack/* requests)
+#   SLACK_CHANNEL_ID      channel id (C...) where tenders are posted
+#   ANTHROPIC_API_KEY     Claude API key, used to read uploaded tender PDFs
+#   CLAUDE_MODEL          Claude model id for the reading step (a secret/var, never hard-coded)
+# Optional [vars] (non-secret) override:
+#   SLACK_POST_INTERVAL_MS  pause between Slack posts, default 1100
+# v2 secrets: APP_TOKEN (Bearer for the web UI /api/*), GITHUB_DISPATCH_TOKEN (POST /api/scans).

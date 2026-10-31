@@ -1,0 +1,161 @@
+{
+ "rows": 2,
+ "os": "0",
+ "page": "1",
+ "total": "583",
+ "procnotices": [
+  {
+   "id": "OP00476269",
+   "notice_type": "Contract Award",
+   "noticedate": "20-Oct-2026",
+   "notice_version_no": "1",
+   "notice_lang_name": "English",
+   "notice_lang_code": "EN",
+   "notice_status": "Published",
+   "project_ctry_code": "3E",
+   "project_ctry_name": "Eastern and Southern Africa",
+   "project_id": "P178566",
+   "project_name": "Food Systems Resilience Program for Eastern and Southern Africa",
+   "regionname": "Eastern And Southern Africa",
+   "prodline": "PE",
+   "credit": [
+    {
+     "financing_id": "IDA71560"
+    }
+   ],
+   "sector": [
+    {
+     "sector_code": "AL",
+     "sector_description": "Livestock"
+    },
+    {
+     "sector_code": "AI",
+     "sector_description": "Irrigation and Drainage"
+    },
+    {
+     "sector_code": "AB",
+     "sector_description": "Agricultural Extension, Research, and Other Support Activities"
+    },
+    {
+     "sector_code": "YA",
+     "sector_description": "Agricultural markets, commercialization and agri-business"
+    },
+    {
+     "sector_code": "AK",
+     "sector_description": "Public Administration - Agriculture, Fishing & Forestry"
+    }
+   ],
+   "agency_name": "South Region FSRP",
+   "bid_reference_no": "ET-SER-NORTH ARI WO-FSRP-400213-GO-RFQ",
+   "bid_currency_code": "USD",
+   "bid_estimate_amount": "3600",
+   "bid_description": "Provision of Motor cycle (quantity 1) for Woreda Implementing Office.",
+   "procurement_group": "GO",
+   "procurement_group_desc": "Goods",
+   "procurement_group_desc_srt": "Goods",
+   "procurement_method_code": "RFQ",
+   "procurement_method_name": "Request for Quotations",
+   "contract_id": "0",
+   "unspsc_classification": [
+    {
+     "proc_voc_id": "73161606",
+     "proc_voc_title": "Motorcycle or bicycle manufacture services",
+     "seg_id": "73000000",
+     "seg_title": "Industrial Production and Manufacturing Services",
+     "family_id": "73160000",
+     "family_title": "Machinery and transport equipment manufacture",
+     "class_id": "73161600",
+     "class_title": "Manufacture of transport equipment",
+     "cmdty_id": "73161606",
+     "cmdty_title": "Motorcycle or bicycle manufacture services"
+    }
+   ],
+   "submission_date": "2026-10-20T00:00:00Z",
+   "notice_text": "<div class='row col-sm-12'><h4>Contract Award</h4><p><b>Project:</b>P178566-Food Systems Resilience Program for Eastern and Southern Africa<br/><b>Loan/Credit/TF Info:</b>IDA-71560<br/><b>Bid/Contract Reference No:</b>ET-SER-NORTH ARI WO-FSRP-400213-GO-RFQ<br/><b>Procurement Method:</b>RFQ-Request for Quotations<br/><b>Scope of Contract:</b><span class='desc-word-wrap'>contract entered between RFSRP and Nasir General Trading</span><br/><b>Notice Version No:</b>0</p><br/></div><div class='row'><div class='col-sm-4'><b>Date Notification of Award Issued</b><br/>(YYYY/MM/DD)<br/>2024/03/31<br/></div><div class='col-sm-4'><b>Duration of Contract</b><br/><br/>30 Day(s)<br/></div></div><div class='spacing'></div><div class='spacing'></div><div class='row'><div class='col-sm-12'><u><b>Awarded Bidder(s):</b></u></div><div class='spacing'></div><div class='spacing'></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>NASIR GENERAL TRADING (1137067)</b><br/>Semen Ari<br/>Country: Ethiopia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>ETB 219000.00<br/><br/>Evaluated Bid Price<br/>ETB 219000.00</div></br></div><div class='col-sm-5'></div><div class='col-sm-7'>Signed Contract price<br/>ETB 219000.00</div><br/></div></div><div class='row'><div class='col-sm-12'><u><b>Evaluated Bidder(s):</b></u></div><div class='spacing'></div><div class='spacing'></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>ZELALEM IMPORT EPXPORT TRADING (1137066)</b><br/>Semen Ari<br/>Country: Ethiopia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>ETB 221750.00<br/><br/>Evaluated Bid Price<br/>ETB 221750.00</div></br></div><br/></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>CHERU GENERAL TRADING (1137065)</b><br/>Semen Ari<br/>Country: Ethiopia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>ETB 220350.00<br/><br/>Evaluated Bid Price<br/>ETB 220350.00</div></br></div><br/></div></div>",
+   "noticetitle": "contract entered between RFSRP and Nasir General Trading",
+   "api_modified_date": "2026-10-27T16:00:49Z",
+   "market_approach_code": "L",
+   "market_approach_name": "Limited",
+   "procurement_major_sector_code": "AX",
+   "procurement_major_sector_name": "Agriculture"
+  },
+  {
+   "id": "OP00475799",
+   "notice_type": "Contract Award",
+   "noticedate": "16-Oct-2026",
+   "notice_version_no": "1",
+   "notice_lang_name": "English",
+   "notice_lang_code": "EN",
+   "notice_status": "Published",
+   "project_ctry_code": "ID",
+   "project_ctry_name": "Indonesia",
+   "project_id": "P157245",
+   "project_name": "Improvement of Solid Waste Management to Support Regional and Metropolitan Cities",
+   "regionname": "East Asia And Pacific",
+   "prodline": "PE",
+   "credit": [
+    {
+     "financing_id": "IBRD90240"
+    }
+   ],
+   "sector": [
+    {
+     "sector_code": "WB",
+     "sector_description": "Waste Management"
+    },
+    {
+     "sector_code": "WF",
+     "sector_description": "Public Administration - Water, Sanitation and Waste Management"
+    }
+   ],
+   "agency_name": "Settlement Infrastructure Implementation Unit Bali Region, Ministry Of Public Works And Housing",
+   "bid_reference_no": "ID-TPST KOTA DENPASAR-556671-GO-RFB",
+   "bid_currency_code": "USD",
+   "bid_estimate_amount": "77204",
+   "bid_description": "Provision of Garbage Motorcycles Phase 2 of Upstream Garbage Collection Facilities in Denpasar City",
+   "procurement_group": "GO",
+   "procurement_group_desc": "Goods",
+   "procurement_group_desc_srt": "Goods",
+   "procurement_method_code": "RFB",
+   "procurement_method_name": "Request for Bids",
+   "contract_id": "0",
+   "unspsc_classification": [
+    {
+     "proc_voc_id": "25101804",
+     "proc_voc_title": "Motorcycle sidecar",
+     "seg_id": "25000000",
+     "seg_title": "Commercial and Military and Private Vehicles and their Accessories and Components",
+     "family_id": "25100000",
+     "family_title": "Motor vehicles",
+     "class_id": "25101800",
+     "class_title": "Motorized cycles",
+     "cmdty_id": "25101804",
+     "cmdty_title": "Motorcycle sidecar"
+    },
+    {
+     "proc_voc_id": "25101801",
+     "proc_voc_title": "Motorcycles",
+     "seg_id": "25000000",
+     "seg_title": "Commercial and Military and Private Vehicles and their Accessories and Components",
+     "family_id": "25100000",
+     "family_title": "Motor vehicles",
+     "class_id": "25101800",
+     "class_title": "Motorized cycles",
+     "cmdty_id": "25101801",
+     "cmdty_title": "Motorcycles"
+    }
+   ],
+   "submission_date": "2026-10-16T00:00:00Z",
+   "notice_text": "<div class='row col-sm-12'><h4>Contract Award</h4><p><b>Project:</b>P157245-Improvement of Solid Waste Management to Support Regional and Metropolitan Cities<br/><b>Loan/Credit/TF Info:</b>IBRD-90240<br/><b>Bid/Contract Reference No:</b>ID-TPST KOTA DENPASAR-556671-GO-RFB<br/><b>Procurement Method:</b>RFB-Request for Bids<br/><b>Scope of Contract:</b><span class='desc-word-wrap'>Provision of Garbage Motorcycles Phase 2 of Upstream Garbage Collection Facilities in Denpasar City</span><br/><b>Notice Version No:</b>0</p><br/></div><div class='row'><div class='col-sm-4'><b>Date Notification of Award Issued</b><br/>(YYYY/MM/DD)<br/>2026/08/24<br/></div><div class='col-sm-4'><b>Duration of Contract</b><br/><br/>105 Day(s)<br/></div></div><div class='spacing'></div><div class='spacing'></div><div class='row'><div class='col-sm-12'><u><b>Awarded Bidder(s):</b></u></div><div class='spacing'></div><div class='spacing'></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>DUTATEKNOLAYAN ABADITAMA (1113005)</b><br/>Jl. Samanhudi No. 22 E, Pasar baru - Jakarta Pusat<br/>Country: Indonesia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>IDR<br/><br/>Evaluated Bid Price<br/>IDR 1144950000</div></br></div><div class='col-sm-5'></div><div class='col-sm-7'>Signed Contract price<br/>IDR 1144950000</div><br/></div></div><div class='row'><div class='col-sm-12'><u><b>Rejected Bidder(s):</b></u></div><div class='spacing'></div><div class='spacing'></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>MULIA BERKAHTAMA ABADI (1082151)</b><br/>Karawaci Office Park Blok Excelis No 10Panunggangan Barat Cibodas KotaTangerang Banten<br/>Country: Indonesia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>IDR<br/><br/>Evaluated Bid Price<br/>IDR<br/><br/>Reason for Rejection<br/>Non-compliance<br/></div></br></div><br/></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>CV. KANA SURYA PERKASA (110044)</b><br/>B19 Jl. Muara Mas Raya, Kota Semarang, ID, 50177<br/>Country: Indonesia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>IDR<br/><br/>Evaluated Bid Price<br/>IDR<br/><br/>Reason for Rejection<br/>Non-compliance<br/></div></br></div><br/></div><div class='row col-sm-12'><div class='col-sm-5'><div class='row col-sm-12'><b>MULTIPARTS RAKINDO (1082117)</b><br/>Dusun Karangtimongo Desa Denanyar Kec. Jombang Kab. Jombang, Provinsi Jawa Timur<br/>Country: Indonesia<br/></br></div></div><div class='col-sm-7'><div class='row col-sm-12'>Bid Price at Opening<br/>IDR<br/><br/>Evaluated Bid Price<br/>IDR<br/><br/>Reason for Rejection<br/>Non-compliance<br/></div></br></div><br/></div></div>",
+   "noticetitle": "Provision of Garbage Motorcycles Phase 2 of Upstream Garbage Collection Facilities in Denpasar City",
+   "api_modified_date": "2026-10-23T16:01:55Z",
+   "market_approach_code": "O",
+   "market_approach_name": "Open",
+   "market_approach_region_code": "N",
+   "market_approach_region_name": "National",
+   "procurement_major_sector_code": "WX",
+   "procurement_major_sector_name": "Water/Sanit/Waste"
+  }
+ ],
+ "_fixture": "FIXTURE: captured 2026-10-31 from search.worldbank.org/api/v2/procnotices?qterm=motorcycle&rows=2 (unmodified record fields)"
+}

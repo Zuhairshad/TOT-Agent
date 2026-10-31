@@ -1,0 +1,607 @@
+{
+  "items": [
+    {
+      "id": "worldbank:OP00282200",
+      "source": "worldbank",
+      "sourceRecordId": "OP00282200",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00282200",
+      "reference": "MMMD/G/002/2023",
+      "title": "Procurement of Personal Protective Equipment (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2024-04-02T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 109620,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00282213",
+      "source": "worldbank",
+      "sourceRecordId": "OP00282213",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00282213",
+      "reference": "MMMD/G/002/2023",
+      "title": "Procurement of Personal Protective Equipment (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2024-04-02T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 81200,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00182675",
+      "source": "worldbank",
+      "sourceRecordId": "OP00182675",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00182675",
+      "reference": "MNDP/ZIFLP/GO/006/2021",
+      "title": "Procurement of safety equipment & camping equipment for FD",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2022-06-05T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.51,
+        "explanation": "Description mentions \"helmet\", \"safety boots\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 78665.4,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:43.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:43.259Z",
+      "lastUpdatedAt": "2026-10-31T14:06:43.259Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00157329",
+      "source": "worldbank",
+      "sourceRecordId": "OP00157329",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00157329",
+      "reference": "MNDP/ZIFLP/GO/011/2021",
+      "title": "PPE (safety boots, work suits and rain coats)  & fire crackers for HWC -DNPW",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-12-07T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"ppe\", \"safety boots\" (ppe); description mentions \"ppe\", \"safety boots\" (ppe); item lines mention \"ppe\", \"safety boots\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 34125,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:36.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:36.507Z",
+      "lastUpdatedAt": "2026-10-31T14:06:36.507Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00157330",
+      "source": "worldbank",
+      "sourceRecordId": "OP00157330",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00157330",
+      "reference": "MNDP/ZIFLP/GO/011/2021",
+      "title": "PPE (safety boots, work suits and rain coats)  & fire crackers for HWC -DNPW",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-12-07T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"ppe\", \"safety boots\" (ppe); description mentions \"ppe\", \"safety boots\" (ppe); item lines mention \"ppe\", \"safety boots\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 82500,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:36.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:36.507Z",
+      "lastUpdatedAt": "2026-10-31T14:06:36.507Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00157331",
+      "source": "worldbank",
+      "sourceRecordId": "OP00157331",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00157331",
+      "reference": "MNDP/ZIFLP/GO/011/2021",
+      "title": "PPE (safety boots, work suits and rain coats)  & fire crackers for HWC -DNPW",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-12-07T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"ppe\", \"safety boots\" (ppe); description mentions \"ppe\", \"safety boots\" (ppe); item lines mention \"ppe\", \"safety boots\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 114000,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:36.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:36.507Z",
+      "lastUpdatedAt": "2026-10-31T14:06:36.507Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00146127",
+      "source": "worldbank",
+      "sourceRecordId": "OP00146127",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00146127",
+      "reference": "ZM-ZEMA-179216-GO-RFQ",
+      "title": "Supply and Delivery of Personal Protective Equipment (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-09-12T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 29771.4,
+        "currency": "USD",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00146129",
+      "source": "worldbank",
+      "sourceRecordId": "OP00146129",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00146129",
+      "reference": "ZM-ZEMA-179216-GO-RFQ",
+      "title": "Supply and Delivery of Personal Protective Equipment (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-09-12T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 208800,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00146131",
+      "source": "worldbank",
+      "sourceRecordId": "OP00146131",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00146131",
+      "reference": "ZM-ZEMA-179216-GO-RFQ",
+      "title": "Supply and Delivery of Personal Protective Equipment (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-09-12T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 144800,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00130936",
+      "source": "worldbank",
+      "sourceRecordId": "OP00130936",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00130936",
+      "reference": "MNDP/ZIFLP/GO/039/2020",
+      "title": "Procurement of  materials for  Forest Reserve Management AWPB 2.1b1.5.2",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-05-29T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.3,
+        "explanation": "Description mentions \"safety helmet\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 192500,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00130937",
+      "source": "worldbank",
+      "sourceRecordId": "OP00130937",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00130937",
+      "reference": "MNDP/ZIFLP/GO/039/2020",
+      "title": "Procurement of  materials for  Forest Reserve Management AWPB 2.1b1.5.2",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-05-29T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.3,
+        "explanation": "Description mentions \"safety boots\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 245700,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00111372",
+      "source": "worldbank",
+      "sourceRecordId": "OP00111372",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00111372",
+      "reference": "ZM-MMEWD-188743-GO-RFQ",
+      "title": "Procurement of  Personal Protective  Equipment  for COVID 19 (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-01-01T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 142650,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00111373",
+      "source": "worldbank",
+      "sourceRecordId": "OP00111373",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00111373",
+      "reference": "ZM-MMEWD-188743-GO-RFQ",
+      "title": "Procurement of  Personal Protective  Equipment  for COVID 19 (PPE)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2021-01-01T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["ppe"],
+      "relevance": {
+        "score": 0.95,
+        "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+        "groups": ["ppe"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 142650,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:34.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+      "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00065710",
+      "source": "worldbank",
+      "sourceRecordId": "OP00065710",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00065710",
+      "reference": "MCDSS/NCS/022/17",
+      "title": "Procurement of  Helmets for motorcycles",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2019-01-31T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["motorbikes", "riding_gear"],
+      "relevance": {
+        "score": 0.96,
+        "explanation": "Title mentions \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes); description mentions \"helmet\" (riding_gear) and \"motorcycle\", \"motorbike\" (motorbikes); item lines mention \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes).",
+        "groups": ["motorbikes", "riding_gear"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 187189.6,
+        "currency": "ZMW",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:15.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:15.869Z",
+      "lastUpdatedAt": "2026-10-31T14:06:15.869Z",
+      "version": 1
+    },
+    {
+      "id": "worldbank:OP00053198",
+      "source": "worldbank",
+      "sourceRecordId": "OP00053198",
+      "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00053198",
+      "reference": "LWSC/LSP/G-012/2015",
+      "title": "Supply and delivery of Motor Vehicles (4no) for LCC and MCDMCH and Motor Bikes (37no) for MCDMCH (MC)",
+      "buyer": null,
+      "country": "Zambia",
+      "noticeType": "Contract Award",
+      "noticeVersion": null,
+      "publishedAt": "2018-05-21T00:00:00.000Z",
+      "deadline": { "value": null, "originalText": null, "status": "not_published" },
+      "deadlineKnown": false,
+      "deadlinePassed": null,
+      "status": "closed",
+      "categories": ["motorbikes"],
+      "relevance": {
+        "score": 0.78,
+        "explanation": "Title mentions \"motorbike\" (motorbikes); description mentions \"motorbike\" (motorbikes); item lines mention \"motorbike\" (motorbikes).",
+        "groups": ["motorbikes"]
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "amount": null,
+        "currency": null,
+        "status": "not_published"
+      },
+      "awardValue": {
+        "label": "Award value",
+        "amount": 93428.35,
+        "currency": "USD",
+        "status": "published"
+      },
+      "shortlisted": false,
+      "firstSeenAt": "2026-10-31T14:06:15.000Z",
+      "lastCheckedAt": "2026-10-31T14:06:15.869Z",
+      "lastUpdatedAt": "2026-10-31T14:06:15.869Z",
+      "version": 1
+    }
+  ],
+  "total": 15,
+  "page": 1,
+  "pageSize": 100
+}

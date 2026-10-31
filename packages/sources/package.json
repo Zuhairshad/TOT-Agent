@@ -1,0 +1,12 @@
+{
+  "name": "@tender-monitor/sources",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "python3 -m venv .venv && .venv/bin/pip install -e '.[dev]'",
+    "test": "test -x .venv/bin/python || pnpm setup; .venv/bin/python -m pytest -m 'not live'",
+    "test:live": ".venv/bin/python -m pytest -m live",
+    "typecheck": "test -x .venv/bin/python || pnpm setup; .venv/bin/python -m mypy tender_sources",
+    "lint": "test -x .venv/bin/python || pnpm setup; .venv/bin/python -m ruff check ."
+  }
+}

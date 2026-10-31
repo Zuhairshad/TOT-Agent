@@ -1,0 +1,307 @@
+{
+  "id": "worldbank:OP00282200",
+  "summary": {
+    "id": "worldbank:OP00282200",
+    "source": "worldbank",
+    "sourceRecordId": "OP00282200",
+    "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00282200",
+    "reference": "MMMD/G/002/2023",
+    "title": "Procurement of Personal Protective Equipment (PPE)",
+    "buyer": null,
+    "country": "Zambia",
+    "noticeType": "Contract Award",
+    "noticeVersion": null,
+    "publishedAt": "2024-04-02T00:00:00.000Z",
+    "deadline": { "value": null, "originalText": null, "status": "not_published" },
+    "deadlineKnown": false,
+    "deadlinePassed": null,
+    "status": "closed",
+    "categories": ["ppe"],
+    "relevance": {
+      "score": 0.95,
+      "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe).",
+      "groups": ["ppe"]
+    },
+    "estimatedValue": {
+      "label": "Estimated value",
+      "amount": null,
+      "currency": null,
+      "status": "not_published"
+    },
+    "awardValue": {
+      "label": "Award value",
+      "amount": 109620,
+      "currency": "ZMW",
+      "status": "published"
+    },
+    "shortlisted": false,
+    "firstSeenAt": "2026-10-31T14:06:34.000Z",
+    "lastCheckedAt": "2026-10-31T14:06:34.910Z",
+    "lastUpdatedAt": "2026-10-31T14:06:34.910Z",
+    "version": 1
+  },
+  "record": {
+    "schemaVersion": 2,
+    "source": "worldbank",
+    "sourceRecordId": "OP00282200",
+    "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00282200",
+    "reference": {
+      "value": "MMMD/G/002/2023",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "bid_reference_no: MMMD/G/002/2023",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:34Z"
+        }
+      ],
+      "note": null
+    },
+    "title": "Procurement of Personal Protective Equipment (PPE)",
+    "buyer": {
+      "value": null,
+      "status": "not_published",
+      "evidence": [],
+      "note": "API field 'agency_name' is empty"
+    },
+    "country": {
+      "value": "Zambia",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "project_ctry_name: Zambia",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:34Z"
+        }
+      ],
+      "note": null
+    },
+    "deliveryLocation": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "publishedAt": {
+      "value": "2024-04-02T00:00:00Z",
+      "originalText": "02-Apr-2024",
+      "timezone": null,
+      "precision": "date",
+      "ambiguous": false,
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "noticedate: 02-Apr-2024",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:34Z"
+        }
+      ],
+      "note": null
+    },
+    "deadline": {
+      "value": null,
+      "originalText": null,
+      "timezone": null,
+      "precision": null,
+      "ambiguous": false,
+      "status": "not_published",
+      "evidence": [],
+      "note": "Award notice: there is no bid deadline."
+    },
+    "status": "closed",
+    "statusEvidence": [
+      {
+        "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+        "quote": "notice_type: Contract Award (contract already awarded)",
+        "page": null,
+        "documentUrl": null,
+        "retrievedAt": "2026-10-31T14:06:34Z"
+      }
+    ],
+    "noticeType": "Contract Award",
+    "noticeVersion": null,
+    "categories": ["ppe"],
+    "relevance": {
+      "score": 0.95,
+      "groups": ["ppe"],
+      "matches": [
+        {
+          "term": "personal protective equipment",
+          "group": "ppe",
+          "field": "title",
+          "context": "Procurement of Personal Protective Equipment (PPE)"
+        },
+        {
+          "term": "ppe",
+          "group": "ppe",
+          "field": "title",
+          "context": "Procurement of Personal Protective Equipment (PPE)"
+        },
+        {
+          "term": "personal protective equipment",
+          "group": "ppe",
+          "field": "description",
+          "context": "Procurement of Personal Protective Equipment (PPE). Procurement of Personal Protective Equipment (PPE)"
+        },
+        {
+          "term": "ppe",
+          "group": "ppe",
+          "field": "description",
+          "context": "Procurement of Personal Protective Equipment (PPE). Procurement of Personal Protective Equipment (PPE)"
+        },
+        {
+          "term": "personal protective equipment",
+          "group": "ppe",
+          "field": "item",
+          "context": "Procurement of Personal Protective Equipment (PPE)"
+        },
+        {
+          "term": "ppe",
+          "group": "ppe",
+          "field": "item",
+          "context": "Procurement of Personal Protective Equipment (PPE)"
+        }
+      ],
+      "excluded": [],
+      "explanation": "Title mentions \"personal protective equipment\", \"ppe\" (ppe); description mentions \"personal protective equipment\", \"ppe\" (ppe); item lines mention \"personal protective equipment\", \"ppe\" (ppe)."
+    },
+    "scopeOfSupply": {
+      "value": "Procurement of Personal Protective Equipment (PPE). Procurement of Personal Protective Equipment (PPE)",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "Procurement of Personal Protective Equipment (PPE)",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:34Z"
+        }
+      ],
+      "note": null
+    },
+    "lots": [],
+    "items": [
+      {
+        "lotNo": null,
+        "lineNo": null,
+        "description": "Procurement of Personal Protective Equipment (PPE)",
+        "specification": {
+          "value": null,
+          "status": "could_not_verify",
+          "evidence": [],
+          "note": null
+        },
+        "quantity": { "value": null, "originalText": null },
+        "unit": null,
+        "evidence": [
+          {
+            "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+            "quote": "Procurement of Personal Protective Equipment (PPE)",
+            "page": null,
+            "documentUrl": null,
+            "retrievedAt": "2026-10-31T14:06:34Z"
+          }
+        ],
+        "needsReview": true
+      }
+    ],
+    "deliverySchedule": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "estimatedValue": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "not_published",
+      "evidence": [],
+      "note": "No estimate in the API record."
+    },
+    "awardValue": {
+      "amount": 109620,
+      "currency": "ZMW",
+      "originalText": "ZMW 109620.00",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=personal+protective+equipment&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "Signed Contract price ZMW 109620.00",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:34Z"
+        }
+      ],
+      "note": null
+    },
+    "tenderFee": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "bidSecurity": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "eligibility": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+    "requiredDocuments": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "submissionMethod": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "contact": {
+      "name": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "email": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "phone": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "address": { "value": null, "status": "could_not_verify", "evidence": [], "note": null }
+    },
+    "documents": [],
+    "accessLimitations": [],
+    "possibleDuplicateOf": [],
+    "firstSeenAt": "2026-10-31T14:06:34Z",
+    "lastCheckedAt": "2026-10-31T14:06:34Z",
+    "lastUpdatedAt": "2026-10-31T14:06:34Z",
+    "contentHash": "fa83c30038864e83daef423af0ee7dea8292ea58a781aa5e1b9674ed4e1b69b6"
+  },
+  "versions": [
+    {
+      "version": 1,
+      "seenAt": "2026-10-31T14:06:34.910Z",
+      "contentHash": "fa83c30038864e83daef423af0ee7dea8292ea58a781aa5e1b9674ed4e1b69b6",
+      "flag": null,
+      "isCurrent": true,
+      "changes": []
+    }
+  ],
+  "shortlisted": false,
+  "shortlistNote": null,
+  "missingData": ["buyer", "deadline", "estimatedValue", "items.quantity"],
+  "missingDetails": {
+    "buyer": "not_published",
+    "deadline": "not_published",
+    "estimatedValue": "not_published",
+    "items.quantity": "not_published"
+  },
+  "conflictingData": []
+}

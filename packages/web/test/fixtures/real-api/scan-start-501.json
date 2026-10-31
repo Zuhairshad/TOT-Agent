@@ -1,0 +1,8 @@
+{
+  "error": "not_configured",
+  "message": "Triggering scans from the UI is not configured. Set: secret GITHUB_DISPATCH_TOKEN (fine-grained token, repository permission \"Actions: Read and write\"): wrangler secret put GITHUB_DISPATCH_TOKEN; var GITHUB_REPOSITORY = \"owner/repo\" in wrangler.toml [vars]. Optional vars: SCAN_WORKFLOW (default \"scan.yml\"), GITHUB_REF (default \"main\").",
+  "missing": [
+    "secret GITHUB_DISPATCH_TOKEN (fine-grained token, repository permission \"Actions: Read and write\"): wrangler secret put GITHUB_DISPATCH_TOKEN",
+    "var GITHUB_REPOSITORY = \"owner/repo\" in wrangler.toml [vars]"
+  ]
+}

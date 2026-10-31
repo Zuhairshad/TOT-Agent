@@ -1,0 +1,149 @@
+{
+  "$ref": "#/definitions/scan-report",
+  "definitions": {
+    "scan-report": {
+      "type": "object",
+      "properties": {
+        "scanId": {
+          "type": "string",
+          "minLength": 8
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "running",
+            "succeeded",
+            "partial",
+            "failed",
+            "blocked"
+          ]
+        },
+        "accessStatus": {
+          "type": "string",
+          "enum": [
+            "ok",
+            "login_required",
+            "blocked_by_challenge",
+            "unconfigured",
+            "unreachable"
+          ]
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "finishedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "params": {
+          "type": "object",
+          "additionalProperties": {},
+          "default": {}
+        },
+        "keywordsSearched": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "pagesChecked": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "recordsFound": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "documentsFetched": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "failures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "default": null
+              },
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "search",
+                  "listing",
+                  "detail",
+                  "document",
+                  "parse",
+                  "ingest",
+                  "other"
+                ]
+              },
+              "error": {
+                "type": "string"
+              },
+              "retryable": {
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "required": [
+              "stage",
+              "error"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "coverageLimitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "checkpoint": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "scanId",
+        "source",
+        "status",
+        "accessStatus",
+        "startedAt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,313 @@
+{
+  "id": "worldbank:OP00065710",
+  "summary": {
+    "id": "worldbank:OP00065710",
+    "source": "worldbank",
+    "sourceRecordId": "OP00065710",
+    "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00065710",
+    "reference": "MCDSS/NCS/022/17",
+    "title": "Procurement of  Helmets for motorcycles",
+    "buyer": null,
+    "country": "Zambia",
+    "noticeType": "Contract Award",
+    "noticeVersion": null,
+    "publishedAt": "2019-01-31T00:00:00.000Z",
+    "deadline": { "value": null, "originalText": null, "status": "not_published" },
+    "deadlineKnown": false,
+    "deadlinePassed": null,
+    "status": "closed",
+    "categories": ["motorbikes", "riding_gear"],
+    "relevance": {
+      "score": 0.96,
+      "explanation": "Title mentions \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes); description mentions \"helmet\" (riding_gear) and \"motorcycle\", \"motorbike\" (motorbikes); item lines mention \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes).",
+      "groups": ["motorbikes", "riding_gear"]
+    },
+    "estimatedValue": {
+      "label": "Estimated value",
+      "amount": null,
+      "currency": null,
+      "status": "not_published"
+    },
+    "awardValue": {
+      "label": "Award value",
+      "amount": 187189.6,
+      "currency": "ZMW",
+      "status": "published"
+    },
+    "shortlisted": false,
+    "firstSeenAt": "2026-10-31T14:06:15.000Z",
+    "lastCheckedAt": "2026-10-31T14:06:15.869Z",
+    "lastUpdatedAt": "2026-10-31T14:06:15.869Z",
+    "version": 1
+  },
+  "record": {
+    "schemaVersion": 2,
+    "source": "worldbank",
+    "sourceRecordId": "OP00065710",
+    "canonicalUrl": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00065710",
+    "reference": {
+      "value": "MCDSS/NCS/022/17",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "bid_reference_no: MCDSS/NCS/022/17",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:15Z"
+        }
+      ],
+      "note": null
+    },
+    "title": "Procurement of  Helmets for motorcycles",
+    "buyer": {
+      "value": null,
+      "status": "not_published",
+      "evidence": [],
+      "note": "API field 'agency_name' is empty"
+    },
+    "country": {
+      "value": "Zambia",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "project_ctry_name: Zambia",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:15Z"
+        }
+      ],
+      "note": null
+    },
+    "deliveryLocation": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "publishedAt": {
+      "value": "2019-01-31T00:00:00Z",
+      "originalText": "31-Jan-2019",
+      "timezone": null,
+      "precision": "date",
+      "ambiguous": false,
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "noticedate: 31-Jan-2019",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:15Z"
+        }
+      ],
+      "note": null
+    },
+    "deadline": {
+      "value": null,
+      "originalText": null,
+      "timezone": null,
+      "precision": null,
+      "ambiguous": false,
+      "status": "not_published",
+      "evidence": [],
+      "note": "Award notice: there is no bid deadline."
+    },
+    "status": "closed",
+    "statusEvidence": [
+      {
+        "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+        "quote": "notice_type: Contract Award (contract already awarded)",
+        "page": null,
+        "documentUrl": null,
+        "retrievedAt": "2026-10-31T14:06:15Z"
+      }
+    ],
+    "noticeType": "Contract Award",
+    "noticeVersion": null,
+    "categories": ["motorbikes", "riding_gear"],
+    "relevance": {
+      "score": 0.96,
+      "groups": ["motorbikes", "riding_gear"],
+      "matches": [
+        {
+          "term": "helmet",
+          "group": "riding_gear",
+          "field": "title",
+          "context": "Procurement of Helmets for motorcycles"
+        },
+        {
+          "term": "motorcycle",
+          "group": "motorbikes",
+          "field": "title",
+          "context": "Procurement of Helmets for motorcycles"
+        },
+        {
+          "term": "helmet",
+          "group": "riding_gear",
+          "field": "description",
+          "context": "Procurement of Helmets for motorcycles. Supply and Delivery of 240 Full Face Helmets motorbikes"
+        },
+        {
+          "term": "motorcycle",
+          "group": "motorbikes",
+          "field": "description",
+          "context": "Procurement of Helmets for motorcycles. Supply and Delivery of 240 Full Face Helmets motorbikes"
+        },
+        {
+          "term": "motorbike",
+          "group": "motorbikes",
+          "field": "description",
+          "context": "ement of Helmets for motorcycles. Supply and Delivery of 240 Full Face Helmets motorbikes"
+        },
+        {
+          "term": "helmet",
+          "group": "riding_gear",
+          "field": "item",
+          "context": "Procurement of Helmets for motorcycles"
+        },
+        {
+          "term": "motorcycle",
+          "group": "motorbikes",
+          "field": "item",
+          "context": "Procurement of Helmets for motorcycles"
+        }
+      ],
+      "excluded": [],
+      "explanation": "Title mentions \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes); description mentions \"helmet\" (riding_gear) and \"motorcycle\", \"motorbike\" (motorbikes); item lines mention \"helmet\" (riding_gear) and \"motorcycle\" (motorbikes)."
+    },
+    "scopeOfSupply": {
+      "value": "Procurement of  Helmets for motorcycles. Supply and Delivery of 240 Full Face Helmets motorbikes",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "Procurement of  Helmets for motorcycles",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:15Z"
+        }
+      ],
+      "note": null
+    },
+    "lots": [],
+    "items": [
+      {
+        "lotNo": null,
+        "lineNo": null,
+        "description": "Procurement of  Helmets for motorcycles",
+        "specification": {
+          "value": null,
+          "status": "could_not_verify",
+          "evidence": [],
+          "note": null
+        },
+        "quantity": { "value": null, "originalText": null },
+        "unit": null,
+        "evidence": [
+          {
+            "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+            "quote": "Procurement of  Helmets for motorcycles",
+            "page": null,
+            "documentUrl": null,
+            "retrievedAt": "2026-10-31T14:06:15Z"
+          }
+        ],
+        "needsReview": true
+      }
+    ],
+    "deliverySchedule": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "estimatedValue": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "not_published",
+      "evidence": [],
+      "note": "No estimate in the API record."
+    },
+    "awardValue": {
+      "amount": 187189.6,
+      "currency": "ZMW",
+      "originalText": "ZMW 187,189.60",
+      "status": "published",
+      "evidence": [
+        {
+          "sourceUrl": "https://search.worldbank.org/api/v2/procnotices?format=json&qterm=motorcycle&project_ctry_name_exact=Zambia&rows=50&os=0&srt=noticedate&order=desc",
+          "quote": "Signed Contract price ZMW 187,189.60",
+          "page": null,
+          "documentUrl": null,
+          "retrievedAt": "2026-10-31T14:06:15Z"
+        }
+      ],
+      "note": null
+    },
+    "tenderFee": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "bidSecurity": {
+      "amount": null,
+      "currency": null,
+      "originalText": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "eligibility": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+    "requiredDocuments": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "submissionMethod": {
+      "value": null,
+      "status": "could_not_verify",
+      "evidence": [],
+      "note": null
+    },
+    "contact": {
+      "name": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "email": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "phone": { "value": null, "status": "could_not_verify", "evidence": [], "note": null },
+      "address": { "value": null, "status": "could_not_verify", "evidence": [], "note": null }
+    },
+    "documents": [],
+    "accessLimitations": [],
+    "possibleDuplicateOf": [],
+    "firstSeenAt": "2026-10-31T14:06:15Z",
+    "lastCheckedAt": "2026-10-31T14:06:15Z",
+    "lastUpdatedAt": "2026-10-31T14:06:15Z",
+    "contentHash": "7a2d3f37a51e691834cb9ba87b85bbc2ffa967f86bd1c4b081944758c9c4f530"
+  },
+  "versions": [
+    {
+      "version": 1,
+      "seenAt": "2026-10-31T14:06:15.869Z",
+      "contentHash": "7a2d3f37a51e691834cb9ba87b85bbc2ffa967f86bd1c4b081944758c9c4f530",
+      "flag": null,
+      "isCurrent": true,
+      "changes": []
+    }
+  ],
+  "shortlisted": false,
+  "shortlistNote": null,
+  "missingData": ["buyer", "deadline", "estimatedValue", "items.quantity"],
+  "missingDetails": {
+    "buyer": "not_published",
+    "deadline": "not_published",
+    "estimatedValue": "not_published",
+    "items.quantity": "not_published"
+  },
+  "conflictingData": []
+}

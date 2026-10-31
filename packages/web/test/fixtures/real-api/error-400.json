@@ -1,0 +1,6 @@
+{
+  "error": "invalid_query",
+  "fields": {
+    "sort": ["must be one of published_desc, published_asc, closing_soon, relevance_desc"]
+  }
+}

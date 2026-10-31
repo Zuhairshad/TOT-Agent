@@ -1,0 +1,30 @@
+{
+  "name": "@tender-monitor/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --passWithNoTests && vitest run --config vitest.node.config.ts",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "preview:slack": "tsx scripts/preview-slack.ts",
+    "test:workers": "vitest run --passWithNoTests",
+    "test:node": "vitest run --config vitest.node.config.ts",
+    "extract:local": "tsx scripts/extract-local.ts",
+    "measure:cpu": "tsx scripts/measure-cpu.ts"
+  },
+  "dependencies": {
+    "@tender-monitor/shared": "workspace:*",
+    "pdf-lib": "^1.17.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.0",
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "@types/node": "^20.19.43",
+    "tsx": "4.23.15",
+    "vitest": "~2.1.0",
+    "wrangler": "^3.80.0"
+  }
+}

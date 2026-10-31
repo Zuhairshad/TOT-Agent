@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tender-sources"
+version = "0.1.0"
+description = "Scrapling-based tender source adapters for tender-monitor (honest, polite, no bypass)."
+requires-python = ">=3.11"
+dependencies = [
+  "scrapling[fetchers]==0.5",
+  "jsonschema>=4.22,<5",
+  "python-dateutil>=2.9,<3",
+  "tzdata",
+  "pdfplumber>=0.11,<1",
+  "pypdf>=5,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "reportlab>=4", "ruff>=0.6", "mypy>=1.11", "types-python-dateutil", "types-jsonschema"]
+ocr = ["pytesseract>=0.3", "pillow"]
+
+[project.scripts]
+tender-sources = "tender_sources.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tender_sources*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits a real network source (deselect with -m 'not live')"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true

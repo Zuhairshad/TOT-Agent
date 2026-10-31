@@ -1,0 +1,11 @@
+node_modules
+pnpm-lock.yaml
+packages/scraper/fixtures
+.wrangler
+.venv
+packages/sources/.cache
+packages/sources/.scan-state
+packages/shared/schema
+**/test-results
+packages/sources/tests/fixtures
+packages/web/test/fixtures/real-api

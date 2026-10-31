@@ -1,0 +1,113 @@
+name: Scan sources
+
+# Python/Scrapling source scans (packages/sources). Separate from scrape.yml, which is the
+# Playwright TendersOnTime runner. Scans never run inside a web request: the UI's "Run scan"
+# button asks the Worker to dispatch this workflow.
+
+on:
+  schedule:
+    # Daily at 03:41 UTC. The World Bank API is an official open feed; daily is plenty and polite.
+    - cron: '41 3 * * *'
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Source adapter id (see: python -m tender_sources sources)'
+        type: string
+        default: worldbank
+      since:
+        description: 'Only notices published on/after this date (YYYY-MM-DD). Empty = incremental.'
+        type: string
+        default: ''
+      triggered_by:
+        description: 'Who/what started this scan (shown in the UI)'
+        type: string
+        default: manual
+      dry_run:
+        description: 'Dry run: scan but write results to a local folder, do not POST to the Worker'
+        type: boolean
+        default: false
+
+# One scan per source at a time. The Worker also refuses overlapping scans (HTTP 409).
+concurrency:
+  group: scan-${{ inputs.source || 'worldbank' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SOURCE: ${{ inputs.source || 'worldbank' }}
+      SINCE: ${{ inputs.since }}
+      TRIGGERED_BY: ${{ inputs.triggered_by || 'schedule' }}
+      DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+      TENDER_SOURCES_CONTACT: ${{ github.server_url }}/${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: packages/sources/pyproject.toml
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e packages/sources
+
+      # Resume an interrupted scan: the checkpoint lives in .scan-state. Cache keys are immutable,
+      # so each run saves under its own id and restores the newest earlier one.
+      - name: Restore scan checkpoint and HTTP cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages/sources/.scan-state
+            packages/sources/.cache
+          key: scan-${{ env.SOURCE }}-${{ github.run_id }}
+          restore-keys: |
+            scan-${{ env.SOURCE }}-
+
+      - name: Scan
+        id: scan
+        working-directory: packages/sources
+        env:
+          INGEST_URL: ${{ secrets.INGEST_URL }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: |
+          set +e
+          args=(scan --source "$SOURCE" --triggered-by "$TRIGGERED_BY" --resume)
+          if [ -n "$SINCE" ]; then args+=(--since "$SINCE"); fi
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run --out "$RUNNER_TEMP/scan-out"); fi
+          python -m tender_sources "${args[@]}"
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          # Exit 2 = the source blocked us (challenge). The scan already reported 'blocked' to the
+          # Worker; we do NOT retry or work around it. Any other non-zero code fails the job below.
+          exit 0
+
+      - name: Summary
+        if: always()
+        run: |
+          code="${{ steps.scan.outputs.exit_code }}"
+          echo "### Scan \`$SOURCE\`: exit code ${code:-unknown}" >> "$GITHUB_STEP_SUMMARY"
+          case "$code" in
+            0) echo "Completed. See the Scans page for pages checked and coverage limits." >> "$GITHUB_STEP_SUMMARY" ;;
+            2) echo "**Blocked by the source.** Not retried and not bypassed. See docs/runbook.md." >> "$GITHUB_STEP_SUMMARY" ;;
+            *) echo "Failed. See the log above and the Scans page." >> "$GITHUB_STEP_SUMMARY" ;;
+          esac
+
+      - name: Upload dry-run output
+        if: ${{ env.DRY_RUN == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-dry-run
+          path: ${{ runner.temp }}/scan-out
+          if-no-files-found: ignore
+
+      - name: Fail the job on real errors (blocked stays visible but is not a crash)
+        if: ${{ steps.scan.outputs.exit_code != '0' && steps.scan.outputs.exit_code != '2' }}
+        run: exit 1

@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`blocks > matches the Slack payload snapshot 1`] = `
+{
+  "blocks": [
+    {
+      "text": {
+        "text": "*<https://www.tendersontime.com/tender/1001|Supply of 500 motorcycles &amp; spare parts &lt;lot 1&gt;>*",
+        "type": "mrkdwn",
+      },
+      "type": "section",
+    },
+    {
+      "fields": [
+        {
+          "text": "*Country*
+Kenya",
+          "type": "mrkdwn",
+        },
+        {
+          "text": "*Purchaser*
+Ministry of Health",
+          "type": "mrkdwn",
+        },
+        {
+          "text": "*Posted*
+2026-10-20",
+          "type": "mrkdwn",
+        },
+        {
+          "text": "*Deadline*
+2026-11-15 (17 days left)",
+          "type": "mrkdwn",
+        },
+        {
+          "text": "*Value*
+USD 250,000",
+          "type": "mrkdwn",
+        },
+        {
+          "text": "*Matched keyword*
+motorcycle, spare parts",
+          "type": "mrkdwn",
+        },
+      ],
+      "type": "section",
+    },
+    {
+      "block_id": "tender_actions",
+      "elements": [
+        {
+          "action_id": "shortlist",
+          "style": "primary",
+          "text": {
+            "text": "Shortlist",
+            "type": "plain_text",
+          },
+          "type": "button",
+          "value": "TOT-1001",
+        },
+        {
+          "action_id": "ignore",
+          "text": {
+            "text": "Ignore",
+            "type": "plain_text",
+          },
+          "type": "button",
+          "value": "TOT-1001",
+        },
+      ],
+      "type": "actions",
+    },
+  ],
+  "text": "New tender: Supply of 500 motorcycles & spare parts <lot 1>",
+}
+`;

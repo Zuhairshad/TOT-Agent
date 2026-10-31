@@ -1,0 +1,48 @@
+{
+  "config": {
+    "groups": [
+      {
+        "id": "motorbikes",
+        "label": "Motorbikes",
+        "terms": ["motorbike", "motorcycle", "motor cycle", "scooter", "electric motorcycle"],
+        "requireContext": []
+      },
+      {
+        "id": "riding_gear",
+        "label": "Motorcycle riding gear",
+        "terms": [
+          "motorcycle helmet",
+          "crash helmet",
+          "riding jacket",
+          "riding gloves",
+          "riding boots",
+          "protective riding equipment",
+          "riding gear"
+        ],
+        "requireContext": []
+      },
+      {
+        "id": "ppe",
+        "label": "Personal protective equipment (broad PPE, not motorcycle-specific)",
+        "terms": [
+          "personal protective equipment",
+          "PPE",
+          "safety helmet",
+          "protective gloves",
+          "safety footwear",
+          "safety boots",
+          "reflective vest",
+          "coverall",
+          "coveralls",
+          "eye protection",
+          "respiratory protection"
+        ],
+        "requireContext": []
+      }
+    ],
+    "exclusions": ["insurance", "software", "audit services", "consultancy services"],
+    "countries": ["Zambia"],
+    "publishedSince": null
+  },
+  "custom": false
+}

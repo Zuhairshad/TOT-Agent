@@ -1,0 +1,159 @@
+name: Scrape
+
+on:
+  schedule:
+    # Minute 7 of every hour (UTC): avoids the busy top of the hour.
+    - cron: '7 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run: scrape but do not POST to /ingest or alert Slack'
+        type: boolean
+        default: false
+
+# Two runs must never overlap (storage-state cache + polite scraping).
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+    steps:
+      - name: Record start time
+        run: echo "START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve Playwright version
+        id: pw
+        run: |
+          version="$(pnpm --filter @tender-monitor/scraper exec playwright --version | awk '{print $NF}')"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright Chromium
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}-${{ steps.pw.outputs.version }}
+
+      # Browser binaries are cached, but the OS packages they need are not.
+      - name: Install Chromium (cache miss)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: pnpm --filter @tender-monitor/scraper exec playwright install --with-deps chromium
+
+      - name: Install Chromium system dependencies (cache hit)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: pnpm --filter @tender-monitor/scraper exec playwright install-deps chromium
+
+      - name: Current week (cache key)
+        id: week
+        run: echo "week=$(date -u +%G-W%V)" >> "$GITHUB_OUTPUT"
+
+      # One key per ISO week: we log in at most once a week, not every hour.
+      - name: Restore login session
+        id: state
+        uses: actions/cache/restore@v4
+        with:
+          path: packages/scraper/storage-state.json
+          key: storage-state-${{ steps.week.outputs.week }}
+
+      - name: Run scraper
+        id: scrape
+        env:
+          TOT_EMAIL: ${{ secrets.TOT_EMAIL }}
+          TOT_PASSWORD: ${{ secrets.TOT_PASSWORD }}
+          INGEST_URL: ${{ secrets.INGEST_URL }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: |
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          set +e
+          pnpm --filter @tender-monitor/scraper start "${args[@]}"
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          # Do not fail here: later steps (save session, alert) must run first.
+          exit 0
+
+      # Only save a session from a clean run. A blocked/failed run may have a
+      # bad session. A cache key is immutable, so this saves once per week.
+      - name: Save login session
+        if: steps.scrape.outputs.exit_code == '0' && steps.state.outputs.cache-hit != 'true' && hashFiles('packages/scraper/storage-state.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: packages/scraper/storage-state.json
+          key: storage-state-${{ steps.week.outputs.week }}
+
+      - name: Upload screenshots
+        if: steps.scrape.outputs.exit_code != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ github.run_id }}
+          path: packages/scraper/screenshots/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      # Tell Slack (via the worker) that the scraper could not do its job.
+      - name: Notify worker (blocked / error)
+        if: steps.scrape.outputs.exit_code != '0' && env.DRY_RUN != 'true'
+        env:
+          INGEST_URL: ${{ secrets.INGEST_URL }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+          EXIT_CODE: ${{ steps.scrape.outputs.exit_code }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "$EXIT_CODE" = "2" ]; then
+            status="blocked"
+            note="Scraper blocked (CAPTCHA, bot challenge or login refused). Not retrying. Screenshots: $RUN_URL"
+          else
+            status="error"
+            note="Scraper failed with exit code $EXIT_CODE. Logs: $RUN_URL"
+          fi
+          body="$(jq -n --arg status "$status" --arg note "$note" \
+            '{source:"github-actions",status:$status,note:$note,tenders:[]}')"
+          curl --silent --show-error --fail --max-time 30 \
+            -X POST "$INGEST_URL" \
+            -H "Authorization: Bearer $INGEST_SECRET" \
+            -H "Content-Type: application/json" \
+            --data "$body" > /dev/null \
+            || echo "::warning::Could not notify the worker"
+
+      - name: Summary
+        if: always()
+        env:
+          EXIT_CODE: ${{ steps.scrape.outputs.exit_code }}
+        run: |
+          elapsed=$(( $(date +%s) - START_EPOCH ))
+          echo "Run time: ${elapsed}s (exit code ${EXIT_CODE:-n/a}, dry run: $DRY_RUN)"
+          {
+            echo "### Scrape run"
+            echo "- Run time: **${elapsed}s** (target: under 120s)"
+            echo "- Exit code: \`${EXIT_CODE:-n/a}\` (0 ok, 2 blocked, other error)"
+            echo "- Dry run: \`$DRY_RUN\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail job if scraper failed
+        if: steps.scrape.outputs.exit_code != '0'
+        env:
+          EXIT_CODE: ${{ steps.scrape.outputs.exit_code }}
+        run: |
+          echo "::error::Scraper exited with code $EXIT_CODE"
+          exit 1

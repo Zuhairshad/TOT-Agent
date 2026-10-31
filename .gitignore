@@ -1,0 +1,22 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.dev.vars
+storage-state.json
+test-results/
+screenshots/
+.wrangler/
+dist/
+*.log
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+packages/sources/.cache/
+packages/sources/.scan-state/

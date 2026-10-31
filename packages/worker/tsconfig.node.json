@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": [
+    "node-tests",
+    "scripts/extract-local.ts",
+    "scripts/measure-cpu.ts",
+    "test/fixture-tender.ts",
+    "vitest.node.config.ts",
+    "src/extracted.ts",
+    "src/claude.ts",
+    "src/base64.ts",
+    "src/pdf-builder.ts",
+    "src/days.ts",
+    "src/crons.ts"
+  ]
+}
