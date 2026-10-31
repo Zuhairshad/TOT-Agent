@@ -12,7 +12,7 @@ plus the `tesseract-ocr` system package).
 
 ```sh
 pnpm install
-pnpm --filter @tender-monitor/sources setup      # creates packages/sources/.venv, installs Scrapling 0.5 pinned
+pnpm --filter @tender-monitor/sources run venv      # creates packages/sources/.venv, installs Scrapling 0.5 pinned
 ```
 
 Scrapling is pinned in `packages/sources/pyproject.toml` as `scrapling[fetchers]==0.5`. The base

@@ -24,7 +24,7 @@ jobs:
           cache: pip
           cache-dependency-path: packages/sources/pyproject.toml
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @tender-monitor/sources setup
+      - run: pnpm --filter @tender-monitor/sources run venv
       - run: pnpm lint
       - run: pnpm --filter @tender-monitor/sources lint
       - run: pnpm exec prettier --check .
